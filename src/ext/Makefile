@@ -2,8 +2,7 @@
 package: ./myhtml-c/lib/static_libmyhtml.a
 
 ./myhtml-c:
-	git clone --depth 1 https://github.com/lexborisov/myhtml.git ./myhtml-c
-	# cd myhtml-c && git reset --hard 4849ceecc34b33ddd662f108cabc9d35cb08b261
+	git clone https://github.com/lexborisov/myhtml.git ./myhtml-c && cd myhtml-c && git reset --hard fd97a7036c1357578f8c5392de2dd205754cc16a
 
 ./myhtml-c/lib/static_libmyhtml.a: ./myhtml-c
 	cd myhtml-c && make MyHTML_BUILD_SHARED=OFF MyHTML_BUILD_WITHOUT_THREADS=YES MyHTML_OPTIMIZATION_LEVEL=-O3
